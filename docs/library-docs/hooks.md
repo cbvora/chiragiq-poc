@@ -11,19 +11,6 @@ Modal based search UI, inspired from react custom hook
 -  Navigate results using arrow keys and select with Enter.
 -  Easily update symbol data dynamically.
 
-## Setup & Usage
-
-###  Add Required HTML Elements
-Ensure your UI includes the necessary elements with a consistent `baseId`:
-```html
-<div id="symbolSearchModal" class="modal">
-    <button id="symbolSearchModal_clickButton">Open Search</button>
-    <input id="symbolSearchModal_searchInput" type="text" placeholder="Search symbols..." />
-    <ul id="symbolSearchModal_resultsList"></ul>
-    <span class="close">&times;</span>
-</div>
-```
-
 ###  Initialize the Hook
 
 Import and use the `useSearchModal` function with your **baseId** and initial data:
