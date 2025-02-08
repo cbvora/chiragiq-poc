@@ -2,7 +2,7 @@
 sidebar_position: 9
 ---
 
-# ChiragIQ Chart Object Initialisation
+# Chart Object Initialisation
 
 Way to Initialise Chart
 

@@ -2,7 +2,8 @@
 sidebar_position: 8
 ---
 
-# chart-template.html
+# Chart HTML Template
+- chart-template.html
 HTML page to load the chart with optional custom UI elements. Include the core charting library and chart initialization script.
 
 ## Chart Container

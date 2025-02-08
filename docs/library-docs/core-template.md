@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-# ChiragIQ Core Template  
+# Core HTML Template  
 
 - **Core HTML**: Defines the structure for ChiragIQ UI.  
 - **Injected By**: `ChiragIQ` class dynamically injects this template.  

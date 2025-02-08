@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# ChiragIQ JavaScript SDK
+# Core JavaScript SDK
 
 The `ChiragIQ` class is the foundation of the charting system, handling key functionalities securely and efficiently:
 
