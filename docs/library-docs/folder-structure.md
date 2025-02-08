@@ -3,6 +3,7 @@ sidebar_position: 2
 ---
 
 # Folder Structure
+High Level Directory Structure
 
 ```
 └── 📁lib
