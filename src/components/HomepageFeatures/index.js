@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Plug & Play AP',
+    title: 'Plug & Play API',
     description: (
       <>
         Easily integrate your timeseries data.
