@@ -61,7 +61,7 @@ const config = {
       navbar: {
         title: 'ChiragIQ Docs',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'ChiragIQ Chart',
           src: 'img/logo.svg',
         },
         items: [
