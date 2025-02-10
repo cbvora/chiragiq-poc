@@ -1,5 +1,5 @@
 ---
-sidebar_position: 9
+sidebar_position: 4
 ---
 
 # Chart Object Initialisation
@@ -16,11 +16,31 @@ When initializing a `ChiragIQ` instance, the following keys are mandatory:
 ## Optional Configuration Keys
 In addition to required fields, `ChiragIQ` accepts several optional settings:
 - **fullscreen** (`boolean`): Enables fullscreen mode for the chart.
-- **theme** (`string`): Sets the chart theme (e.g., `"light"` or `"dark"`).
+- **theme** (`string`): [todo] Sets the chart theme (e.g., `"light"` or `"dark"`).
 - **disabledIndicators** (`array`): List of indicators to disable (e.g., `['50DMA', '200DMA']`).
+- **defaultIndicators** (`array`): List of default indicator to load (e.g., `['50DMA', '200DMA']`).
 - **symbolFnDataKeyMap** (`object`): Maps keys for symbol fetching (e.g., `{ valueKey: "symbol", displayKey: "name" }`).
+- **range** : Default range of time period is "1y". Choose from `[
+                        "1d",
+                        "5d",
+                        "1mo",
+                        "3mo",
+                        "6mo",
+                        "1y",
+                        "2y",
+                        "5y",
+                        "10y",
+                        "ytd",
+                        "max"
+                    ]` . Please note that, During smoke testing found that "max" is not supported by curerrent API
 
-
+ - **customIndicators** Add custom your indicator. You need to pass callback funciton which will receive array of closed data value
+ ```javascript
+    customIndicators: [
+        { name: "CMA", display: "Cumulative Moving Average", callbackFn: calculateCMA , color: "#5C6BC0"},
+        { name: "150DMA", display: "150 Day Moving Average", key:150, callbackFn: calculateNDayMA , color: "#C6B820"},
+    ]
+    ```
 
 ### Example Usage with Static Data
 Here’s a basic example of using `ChiragIQ` with static data:
@@ -36,22 +56,28 @@ const staticSymbols = [
     { symbol: "TSLA", name: "Tesla Inc." }
 ];
 
-const newChart = new ChiragIQ({
+const newChart = new ChartIQ({
     container: "chiragiq_container",
-    symbol: "AAPL",
-    fetchHistoryFn: () => Promise.resolve(staticHistory),
-    fetchSymbolFn: () => Promise.resolve(staticSymbols),
-    theme: "dark", // to-do
     fullscreen: true,
+    theme: "light",
+    symbol: "IBM",
+    fetchHistoryFn: fetchStockHistory,
+    fetchSymbolFn: fetchSymbols,
+    symbolFnDataKeyMap : { valueKey: "symbol", displayKey: "name" },
     disabledIndicators: ["50DMA","200DMA"],
-    symbolFnDataKeyMap : { valueKey: "symbol", displayKey: "name" }
+    defaultIndicators: ["90DMA","30DMA","50DMA","100DMA"],
+    range:"2y",
+    customIndicators: [
+        { name: "CMA", display: "Cumulative Moving Average", callbackFn: calculateCMA , color: "#5C6BC0"},
+        { name: "150DMA", display: "150 Day Moving Average", key:150, callbackFn: calculateNDayMA , color: "#C6B820"},
+    ]
 });
 
 ```
 
 
 ## Event Handling
-You can attach event listeners to handle various chart events:
+You can attach event listeners to handle various chart events: You can import `eventCallbackEnum` Enum to see all the supported events
 
 - **onChartReady**: Triggered when the chart is fully initialized.
 - **onSymbolChanged**: Fires when the user selects a new stock symbol.

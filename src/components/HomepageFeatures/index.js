@@ -28,10 +28,10 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Secure ',
+    title: 'Event Driven Architecture ',
     description: (
       <>
-        Built with security best practices
+        You can subscribe to many available events 
       </>
     ),
   },
@@ -40,6 +40,14 @@ const FeatureList = [
     description: (
       <>
         No dependencies, lightweight & fast
+      </>
+    ),
+  },
+  {
+    title: 'Custom Indicator Support ',
+    description: (
+      <>
+        Add your own custom indicators
       </>
     ),
   },
