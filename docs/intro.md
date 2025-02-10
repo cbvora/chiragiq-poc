@@ -30,7 +30,7 @@ The API used for fetching symbol history is not publicly exposed. To bypass CORS
 - Using proxy: Visit [CORS Anywhere](https://cors-anywhere.herokuapp.com/corsdemo) and click **Request temporary access to the demo server**.
 
 **OR**
-## 2. Option 2
+## 2. Option 2 (Preferred)
 - Install a Chrome Extension:  
   - [Allow CORS: Access-Control-Allow-Origin](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en).  
   - Open the extension and click on the **C** icon in the left panel.  
