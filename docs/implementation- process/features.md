@@ -6,7 +6,7 @@ sidebar_position: 7
 
 # Charting Library Features
 
-## Data Loading
+## Plug your data Data
 - Use your own APIs to load symbols and retrieve historical data about symbols.
 - Search and select symbols dynamically.
 - Users can change symbols from the consumer side.
@@ -32,6 +32,6 @@ sidebar_position: 7
 - Users can share a link that includes the plotted symbol and indicators so others can view the same configuration.
 
 ## Documentation
-- Comprehensive documentation covering configuration, usage, and customization.
+- Documentation covering configuration, usage, and customization.
 
 

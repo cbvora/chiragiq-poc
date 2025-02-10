@@ -4,6 +4,10 @@ sidebar_position: 5
 
 # To-Do list/ Planning notes
 
+Received the task on **3rd Feb (Monday) evening**: Analyzed the requirements and slept over it. 
+
+A sentence from task details —**"Doesn't need to be fancy. Just want to get a sense of your coding style. But if you want to get fancy, please do 😊"**— `motivated` me to go the extra mile and create it with best architecture
+
 
 1. Auto Complete - search and select symbol
 2. Resolve symbol with some extra details from UI
