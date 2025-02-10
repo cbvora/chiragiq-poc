@@ -24,7 +24,3 @@ sidebar_position: 7
 - Users can add their own indicators.
 - Users can share a link that includes the plotted symbol and indicators so others can view the same configuration.
 
-## Documentation
-- Documentation covering configuration, usage, and customization.
-
-
